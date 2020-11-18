@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica", "Arial", sans-serif
+}
+
+body > div.background {
+	position: fixed;
+	z-index: -1000;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-image: url("../img/background.jpg");
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	opacity: 0.42;
+}
+
+.form_full_center {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+}
+
+.login_form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	align-content: flex-end;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 15px;
+	width: 30%;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.form_input, button {
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 15px;
+	border: 2px solid lightblue;
+	border-radius: 3px;
+	height: 3em;
+	padding: 0 14px;
+	font-size: 0.9em;
+}
+
+.form_input:focus {
+	border: 3px solid #94a0cd;
+	border-radius: 5px;
+	padding: 0 13px;
+}
+
+.form_input:last-child, .login_form button:last-of-type {
+	margin-bottom: auto;
+}
+
+.form_input[type="submit"], button {
+	width: auto;
+	height: 2em;
+	padding: 0 14px;
+	box-sizing: border-box;
+}
+
+.form_input[type="submit"]:focus, button:focus {
+	border-radius: 3px;
+	border: 2px solid #94a0cd;
+}
+
+.main {
+	display: flex;
+	align-items: space-between;
+}
+
+.sidepanel {
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	box-sizing: border-box;
+	text-align: center;
+	min-height: 100vh;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.row {
+
+}
+
+.row:not(:last-of-type) {
+	margin-bottom: 20px;
+}
+
+.row p {
+	font-size: 1.4em;
+	margin: 20px;
+}
+
+.table_users {
+	border-collapse: collapse;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+.user {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+/* CSS zadané z úkolu (Napojení eshopu na databázi). Trochu poupravené barvy. */
+
+.catalog-item {
+	width: 200px;
+	background-color: beige;
+	height: 300px;
+	margin: 5px;
+}
+
+.catalog-img {
+	font-size: 100px;
+}
+
+.cart-button, .catalog-buy-button {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid rgba(150, 150, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.75);
+	text-align: center;
+}
+
+#catalog-items {
+	display: flex;
+}
+
+a.catalog-buy-button {
+	display: block;
+}
+
+.catalog-item {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cart-item {
+	justify-content: space-between;
+	display: flex;
+	margin: 5px;
+	border: 1px solid rgba(150, 150, 255, 0.8);
+	padding: 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cart-quantity {
+	margin: 10px;
+}
+
+.cart-price {
+	margin: 10px;
+}
+
+.cart-control {
+	display: flex;
+}
+
+#cart-total-price {
+	font-weight: bold;
+}
+
+/* Konec zadaných CSS */
+
+.cart-img {
+	font-size: 50px;
+}
+
+.cart-control {
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cart-control > * {
+	height: max-content;
+}
+
+.cart-item {
+	align-items: center;
+}
+
+#cart-total-price {
+	margin-top: 20px;
+}
+
+.cart-name {
+	height: max-content;
+}
+
+#catalog-items {
+	flex-wrap: wrap;
+	max-width: 80%;
+	justify-content: center;
+}
+
+.cart-button {
+	height: 1em;
+	width: 1em;
+}
+
+.user > * {
+	margin-top: 20px;
+	width: max-content;
+}
+
+.user h3 {
+	background-color: rgba(255, 255, 255, 0.35);
+	padding: 14px;
+}
+
+.picto > img {
+	height: 200px;
+	width: auto;
+	background-color: rgba(255, 255, 255, 0.35);
+	clip-path: circle(100px at center);
+}
+
+.user > form {
+	width: 80%;
+}
+
+.table_users {
+	width: 80%;
+	font-size: 1.4em;
+}
+
+.table_users tr {
+	height: 50px;
+}
+
+.table_users tr:not(:first-of-type) {
+	border-top: 1px solid black;
+}
+
+.table_users button {
+	height: 40px;
+	margin-top: 15px;
+}
+
+.decorate {
+	text-decoration: underline;
+	color: inherit;
+}
+
+.decorate:link {
+  color: blue;
+}
+
+.decorate:visited {
+  color: blue;
+}
+
+.decorate:hover {
+  color: blue;
+}
+
+.decorate:active {
+  color: purple;
+}
+
+@media only screen and (max-width: 768px) {
+	.login_form {
+		width: 85%;
+	}
+}
